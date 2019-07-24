@@ -1,0 +1,43 @@
+# Ignore OS files #
+# =============== #
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+*[Tt]humbs.db
+*.Trashes
+
+# Ignore packages #
+# =============== #
+*.7z
+*.dmg
+*.gz
+*.iso
+*.jar
+*.rar
+*.tar
+*.zip
+
+# Ignore packages #
+# =============== #
+node_modules/
+
+# Ignore everything in "wp-content" except the "plugins", "themes", and 
+# "uploads" directories. #
+/*
+!.gitignore
+!plugins/
+!themes/
+!uploads/
+!README.md
+
+plugins/*
+!plugins/inhabitent-functionality
+
+themes/*
+!themes/quotesondev
+!themes/quotesondev/node_modules/
+
+uploads/wp-migrate-db/
