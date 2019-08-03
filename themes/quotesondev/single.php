@@ -16,7 +16,6 @@ get_header(); ?>
 
 			<button type="button" id="close-comments">Show Me Another!</button>
 
-			<?php the_post_navigation(); ?>
 
 
 		<?php endwhile; // End of the loop. ?>

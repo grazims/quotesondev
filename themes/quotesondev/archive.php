@@ -19,21 +19,33 @@ get_header(); ?>
 			</header><!-- .page-header -->
 
 			<?php /* Start the Loop */ ?>
-			<?php while ( have_posts() ) : the_post(); ?>
-
+			<?php while ( have_posts() ) : the_post(); 
+			
+			?>
+			
 				<?php
 					get_template_part( 'template-parts/content' );
 				?>
 
 			<?php endwhile; ?>
 
-			<?php the_posts_navigation(); ?>
+
+			
+			<?php the_posts_pagination( array(
+    'mid_size' => 2,
+    'prev_text' => __( '← Previous', 'textdomain' ),
+    'next_text' => __( 'Next →', 'textdomain' ),
+) ); ?>
+
+			
 
 		<?php else : ?>
 
 			<?php get_template_part( 'template-parts/content', 'none' ); ?>
 
 		<?php endif; ?>
+
+		
 
 		</main><!-- #main -->
 	</div><!-- #primary -->

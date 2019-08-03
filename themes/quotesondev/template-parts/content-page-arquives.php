@@ -23,7 +23,7 @@
 			$myposts = get_posts( 'posts_per_page=-1' );
 			foreach ( $myposts as $post ) : setup_postdata( $post ); ?>
 			
-			<a href="<?php the_permalink(); ?>"><?php the_title(); ?></a>
+			<ul class="archives"><li><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></li></ul>
 
 			<?php endforeach; wp_reset_postdata();?>
 		
@@ -32,22 +32,27 @@
 
 	<div class="categories">
 		<h2>Categories</h2>	
+		
+			
 		<?php
-			$tags = get_categories();
-		$html = '<div class="post_categories">';
+			$tags = get_categories();	
+		?>
+		<ul class="grazi">
+			<?php
 		foreach ( $tags as $tag ) {
 			$tag_link = get_tag_link( $tag->term_id );
 					
 			$html .= "<a href='{$tag_link}' title='{$tag->name} Tag' class='{$tag->slug}'>";
 			$html .= "{$tag->name}</a>";
 		}
-		$html .= '</div>';
 		echo $html; ?>
+		
+		</ul>
 	</div>
 	
 	
 	<div class="tags">
-		<h1>Tags</h1>	
+		<h2>Tags</h2>	
 		<?php
 			$tags = get_tags();
 		$html = '<div class="post_tags">';

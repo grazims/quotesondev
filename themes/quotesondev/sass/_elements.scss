@@ -16,6 +16,7 @@ html {
 
 body {
   background: $color__background-body; /* Fallback for when there is no custom background color defined. */
+  padding: 2.5%;
 }
 
 blockquote,
@@ -37,7 +38,7 @@ hr {
 
 ul,
 ol {
-  margin: 0 0 $base__space-unit ($base__space-unit * 2);
+  // margin: 0 0 $base__space-unit ($base__space-unit * 2);
 }
 
 ul {

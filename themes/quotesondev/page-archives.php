@@ -13,7 +13,7 @@ get_header(); ?>
 		<?php if ( have_posts() ) : ?>
 
 			<header class="page-header">
-				<h1> Arquives</h1>	
+				<h1> Archives</h1>	
 			</header><!-- .page-header -->
 			
 			<?php /* Start the Loop */ ?>

@@ -11,4 +11,28 @@
 
 /* All Archives Page */
 
+.archives {
+  display: inline-flex;
+  list-style-type: none;
+}
+
+.a {
+  list-style-type: none;
+}
+
 /* Submit a Quote Page */
+
+.form-section {
+  display: flex;
+  flex-direction: column;
+  font-weight: 300;
+
+  .form {
+    padding-bottom: 0.8rem;
+    p {
+      margin-bottom: 0.5rem;
+    }
+  }
+}
+.form-section2 {
+}

@@ -1,15 +1,25 @@
-.container {
-  background-color: #222222;
-}
-
 .content-area {
+  // background-color: rebeccapurple;
   margin: 0 auto;
-  max-width: 1080px;
-  padding: 2.5%;
+  padding-top: 1rem;
   width: 100%;
-  background-color: palevioletred;
-
   font-family: 'Exo';
-  font-weight: 500;
+  font-weight: 300;
   font-style: normal;
+  font-size: 16px;
+  line-height: 1.5;
 }
+
+@media (min-width: 620px) {
+  .content-area {
+    background-color: burlywood;
+  }
+}
+
+@media (min-width: 1080px) {
+  .content-area {
+    background-color: hotpink;
+  }
+}
+
+//background-color: #222222;
