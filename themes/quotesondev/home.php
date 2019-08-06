@@ -18,9 +18,9 @@ get_header(); ?>
 			<?php query_posts($args); if(have_posts()) : while ( have_posts() ) : the_post(); ?>
 
 				<div class="nome">
-				<i class="fas fa-quote-left"></i>
+				<!-- <i class="fas fa-quote-left"></i> -->
 				<?php get_template_part( 'template-parts/content-home' ); ?>
-				<i class="fas fa-quote-right"></i>
+				<!-- <i class="fas fa-quote-right"></i> -->
 				</div>
 				<button type="button" id="another">"Show Me Another!"</button>
 

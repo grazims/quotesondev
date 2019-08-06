@@ -17,7 +17,7 @@
 	<div class="grandecontainer">
 		
 	<div class="authors">
-		<h2>Quote Authors</h2>
+	<div class="subtitle"><h2>Quote Authors</h2></div>
 		
 			<?php
 			$myposts = get_posts( 'posts_per_page=-1' );
@@ -31,13 +31,12 @@
 
 
 	<div class="categories">
-		<h2>Categories</h2>	
+		<div class="subtitle"><h2>Categories</h2></div>	
 		
-			
 		<?php
 			$tags = get_categories();	
 		?>
-		<ul class="grazi">
+		<ul class="tagslist">
 			<?php
 		foreach ( $tags as $tag ) {
 			$tag_link = get_tag_link( $tag->term_id );
@@ -52,7 +51,7 @@
 	
 	
 	<div class="tags">
-		<h2>Tags</h2>	
+	<div class="subtitle"><h2>Tags</h2></div>	
 		<?php
 			$tags = get_tags();
 		$html = '<div class="post_tags">';
