@@ -18,4 +18,8 @@
   @media (min-width: 620px) {
     display: flex;
   }
+
+  @media (min-width: 1080px) {
+    justify-content: space-evenly;
+  }
 }

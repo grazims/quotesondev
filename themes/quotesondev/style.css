@@ -837,6 +837,13 @@ object {
     @media (min-width: 620px) {
       .site-branding .logo {
         width: 400px; } }
+    @media (min-width: 1080px) {
+      .site-branding .logo {
+        width: 500px;
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        margin: 0 auto; } }
 
 .content-area {
   margin: 0 auto;
@@ -853,8 +860,9 @@ object {
     font-size: 1.75rem; } }
 
 @media (min-width: 1080px) {
-  .content-area {
-    background-color: hotpink; } }
+  .site-content {
+    margin-right: 20rem;
+    margin-left: 20rem; } }
 
 .site-info {
   margin-top: 2rem;
@@ -873,3 +881,8 @@ object {
       display: -webkit-box;
       display: -ms-flexbox;
       display: flex; } }
+  @media (min-width: 1080px) {
+    .site-info {
+      -webkit-box-pack: space-evenly;
+          -ms-flex-pack: space-evenly;
+              justify-content: space-evenly; } }
