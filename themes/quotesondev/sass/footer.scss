@@ -15,4 +15,7 @@
       padding-left: 0;
     }
   }
+  @media (min-width: 620px) {
+    display: flex;
+  }
 }

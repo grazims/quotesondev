@@ -15,7 +15,10 @@
     display: inline-flex;
     list-style-type: none;
     font-size: 1rem;
-    //   font-weight: 400;
+
+    @media (min-width: 620px) {
+      font-size: 1.25rem;
+    }
   }
 
   .subtitle {
@@ -23,9 +26,17 @@
   }
   .tagslist {
     font-size: 1rem;
+
+    @media (min-width: 620px) {
+      font-size: 1.25rem;
+    }
   }
   .tags {
     font-size: 1rem;
+
+    @media (min-width: 620px) {
+      font-size: 1.25rem;
+    }
   }
 }
 .a {
@@ -74,4 +85,10 @@
       // border-bottom: 1px dashed #ffffff;
     }
   }
+}
+
+/* About */
+
+.about {
+  font-size: 1rem;
 }

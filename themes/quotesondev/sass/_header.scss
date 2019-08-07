@@ -3,5 +3,9 @@
 
   .logo {
     width: 300px;
+
+    @media (min-width: 620px) {
+      width: 400px;
+    }
   }
 }
