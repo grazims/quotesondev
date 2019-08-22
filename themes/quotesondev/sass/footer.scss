@@ -24,7 +24,13 @@
   .site-info {
     display: flex;
   }
+  .gra {
+    padding-left: 3rem;
+  }
 }
 
 @media (min-width: 1120px) {
+  .site-info {
+    justify-content: flex-end;
+  }
 }

@@ -9,37 +9,6 @@
   line-height: 1.5;
   font-size: 1.25rem;
 }
-.quotation {
-  font-size: 30px;
-  //margin: 0 auto;
-  quotes: '\201C''\201D''\2018''\2019';
-  padding: 10px 20px;
-  line-height: 1.4;
-  color: red;
-}
-
-.quotation:before {
-  content: open-quote;
-  display: inline;
-  // height: 0;
-  line-height: 0;
-  left: -10px;
-  position: absolute;
-  top: 30px;
-  color: #ccc;
-  font-size: 3em;
-}
-.quotation::after {
-  content: close-quote;
-  display: inline;
-  // height: 0;
-  line-height: 0;
-  left: 10px;
-  position: absolute;
-  top: 35px;
-  color: #ccc;
-  font-size: 3em;
-}
 
 @media (min-width: 620px) {
   .content-area {

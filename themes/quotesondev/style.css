@@ -861,33 +861,6 @@ object {
   line-height: 1.5;
   font-size: 1.25rem; }
 
-.quotation {
-  font-size: 30px;
-  quotes: "“" "”" "‘" "’";
-  padding: 10px 20px;
-  line-height: 1.4;
-  color: red; }
-
-.quotation:before {
-  content: open-quote;
-  display: inline;
-  line-height: 0;
-  left: -10px;
-  position: absolute;
-  top: 30px;
-  color: #ccc;
-  font-size: 3em; }
-
-.quotation::after {
-  content: close-quote;
-  display: inline;
-  line-height: 0;
-  left: 10px;
-  position: absolute;
-  top: 35px;
-  color: #ccc;
-  font-size: 3em; }
-
 @media (min-width: 620px) {
   .content-area {
     font-size: 1.75rem; } }
@@ -949,4 +922,12 @@ object {
   .site-info {
     display: -webkit-box;
     display: -ms-flexbox;
-    display: flex; } }
+    display: flex; }
+  .gra {
+    padding-left: 3rem; } }
+
+@media (min-width: 1120px) {
+  .site-info {
+    -webkit-box-pack: end;
+        -ms-flex-pack: end;
+            justify-content: flex-end; } }
