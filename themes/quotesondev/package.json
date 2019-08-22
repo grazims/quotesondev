@@ -26,10 +26,10 @@
     "type": "git",
     "url": "git+https://github.com/redacademy/quotesondev-starter.git"
   },
-  "author": "mandiwise",
+  "author": "grazims",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/redacademy/quotesondev-starter/issues"
+    "url": "https://github.com/grazims/quotesondev/issues"
   },
-  "homepage": "https://github.com/redacademy/quotesondev-starter#readme"
+  "homepage": "https://github.com/grazims/quotesondev"
 }
