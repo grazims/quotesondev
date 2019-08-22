@@ -1,16 +1,21 @@
 .site-branding {
   margin-top: 2rem;
-
+  display: flex;
   .logo {
     width: 300px;
+  }
+}
+@media (min-width: 620px) {
+  .logo {
+    width: 400px;
+  }
+}
+@media (min-width: 1120px) {
+  .site-branding {
+    max-width: 2560px;
 
-    @media (min-width: 620px) {
-      width: 400px;
-    }
-
-    @media (min-width: 1080px) {
-      width: 500px;
-      display: flex;
+    .logo {
+      width: 600px;
       margin: 0 auto;
     }
   }

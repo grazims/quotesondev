@@ -1,14 +1,44 @@
 .content-area {
-  // background-color: rebeccapurple;
   margin: 0 auto;
   padding-top: 1rem;
+  padding-bottom: 3rem;
   width: 100%;
   font-family: 'Exo';
   font-weight: 300;
   font-style: normal;
   line-height: 1.5;
-
   font-size: 1.25rem;
+}
+.quotation {
+  font-size: 30px;
+  //margin: 0 auto;
+  quotes: '\201C''\201D''\2018''\2019';
+  padding: 10px 20px;
+  line-height: 1.4;
+  color: red;
+}
+
+.quotation:before {
+  content: open-quote;
+  display: inline;
+  // height: 0;
+  line-height: 0;
+  left: -10px;
+  position: absolute;
+  top: 30px;
+  color: #ccc;
+  font-size: 3em;
+}
+.quotation::after {
+  content: close-quote;
+  display: inline;
+  // height: 0;
+  line-height: 0;
+  left: 10px;
+  position: absolute;
+  top: 35px;
+  color: #ccc;
+  font-size: 3em;
 }
 
 @media (min-width: 620px) {
@@ -17,11 +47,48 @@
   }
 }
 
-@media (min-width: 1080px) {
-  .site-content {
-    margin-right: 20rem;
-    margin-left: 20rem;
+@media (min-width: 1120px) {
+  .content-area {
+    padding-right: 15rem;
+    padding-left: 15rem;
+    font-size: 2rem;
+    max-width: 2560px;
+
+    .quotation {
+      font-size: 30px;
+      //margin: 0 auto;
+      quotes: '\201C''\201D''\2018''\2019';
+      padding: 10px 20px;
+      line-height: 1.4;
+      color: red;
+    }
+
+    .quotation:before {
+      content: open-quote;
+      display: inline;
+      // height: 0;
+      line-height: 0;
+      left: -10px;
+      position: absolute;
+      top: 30px;
+      color: #ccc;
+      font-size: 3em;
+    }
+    .quotation::after {
+      content: close-quote;
+      display: inline;
+      // height: 0;
+      line-height: 0;
+      left: 10px;
+      position: absolute;
+      top: 35px;
+      color: #ccc;
+      font-size: 3em;
+    }
+
+    button {
+      display: flex;
+      margin: 0 auto;
+    }
   }
 }
-
-//background-color: #222222;

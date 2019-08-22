@@ -12,7 +12,7 @@
 			<footer id="colophon" class="site-footer" role="contentinfo">
 				<div class="site-info">
 					<div class="footer">
-				    	<ul class="footer">
+				    	<ul class="footer2">
 							<li class="footer-item">
 								<a href="http://localhost:3000/quotes/about/">About</a> 
 							</li>
@@ -23,9 +23,9 @@
 								<a href="http://localhost:3000/quotes/submit/">Submit a Quote</a> 
 							</li>
 					</div>
+					<div>
 						<p>Brought to you by <a href="http://www.redacademy.com">RED Academy</a>
-					
-
+					</div>
 				</div><!-- .site-info -->
 			</footer><!-- #colophon -->
 		</div><!-- #page -->

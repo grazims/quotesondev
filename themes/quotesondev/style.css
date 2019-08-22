@@ -1,3 +1,4 @@
+@charset "UTF-8";
 /*!
 Theme Name: Quotes on Dev Starter Theme
 Theme URI: http://underscores.me/
@@ -831,23 +832,28 @@ object {
   font-size: 1rem; }
 
 .site-branding {
-  margin-top: 2rem; }
+  margin-top: 2rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex; }
   .site-branding .logo {
     width: 300px; }
-    @media (min-width: 620px) {
-      .site-branding .logo {
-        width: 400px; } }
-    @media (min-width: 1080px) {
-      .site-branding .logo {
-        width: 500px;
-        display: -webkit-box;
-        display: -ms-flexbox;
-        display: flex;
-        margin: 0 auto; } }
+
+@media (min-width: 620px) {
+  .logo {
+    width: 400px; } }
+
+@media (min-width: 1120px) {
+  .site-branding {
+    max-width: 2560px; }
+    .site-branding .logo {
+      width: 600px;
+      margin: 0 auto; } }
 
 .content-area {
   margin: 0 auto;
   padding-top: 1rem;
+  padding-bottom: 3rem;
   width: 100%;
   font-family: 'Exo';
   font-weight: 300;
@@ -855,34 +861,92 @@ object {
   line-height: 1.5;
   font-size: 1.25rem; }
 
+.quotation {
+  font-size: 30px;
+  quotes: "“" "”" "‘" "’";
+  padding: 10px 20px;
+  line-height: 1.4;
+  color: red; }
+
+.quotation:before {
+  content: open-quote;
+  display: inline;
+  line-height: 0;
+  left: -10px;
+  position: absolute;
+  top: 30px;
+  color: #ccc;
+  font-size: 3em; }
+
+.quotation::after {
+  content: close-quote;
+  display: inline;
+  line-height: 0;
+  left: 10px;
+  position: absolute;
+  top: 35px;
+  color: #ccc;
+  font-size: 3em; }
+
 @media (min-width: 620px) {
   .content-area {
     font-size: 1.75rem; } }
 
-@media (min-width: 1080px) {
-  .site-content {
-    margin-right: 20rem;
-    margin-left: 20rem; } }
-
-.site-info {
-  margin-top: 2rem;
-  font-weight: 300; }
-  .site-info .footer-item {
-    display: -webkit-inline-box;
-    display: -ms-inline-flexbox;
-    display: inline-flex;
-    border-right: 1px solid #fff;
-    line-height: 1;
-    padding: 0 1rem; }
-    .site-info .footer-item:first-child {
-      padding-left: 0; }
-  @media (min-width: 620px) {
-    .site-info {
+@media (min-width: 1120px) {
+  .content-area {
+    padding-right: 15rem;
+    padding-left: 15rem;
+    font-size: 2rem;
+    max-width: 2560px; }
+    .content-area .quotation {
+      font-size: 30px;
+      quotes: "“" "”" "‘" "’";
+      padding: 10px 20px;
+      line-height: 1.4;
+      color: red; }
+    .content-area .quotation:before {
+      content: open-quote;
+      display: inline;
+      line-height: 0;
+      left: -10px;
+      position: absolute;
+      top: 30px;
+      color: #ccc;
+      font-size: 3em; }
+    .content-area .quotation::after {
+      content: close-quote;
+      display: inline;
+      line-height: 0;
+      left: 10px;
+      position: absolute;
+      top: 35px;
+      color: #ccc;
+      font-size: 3em; }
+    .content-area button {
       display: -webkit-box;
       display: -ms-flexbox;
-      display: flex; } }
-  @media (min-width: 1080px) {
-    .site-info {
-      -webkit-box-pack: space-evenly;
-          -ms-flex-pack: space-evenly;
-              justify-content: space-evenly; } }
+      display: flex;
+      margin: 0 auto; } }
+
+.site-info {
+  margin-top: 4rem;
+  font-weight: 300; }
+  .site-info .footer {
+    padding-bottom: 1rem; }
+  .site-info .footer2 {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex; }
+  .site-info .footer-item {
+    border-right: 1px solid #fff;
+    line-height: 1;
+    padding: 0 1rem;
+    list-style-type: none; }
+    .site-info .footer-item:first-child {
+      padding-left: 0; }
+
+@media (min-width: 620px) {
+  .site-info {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex; } }

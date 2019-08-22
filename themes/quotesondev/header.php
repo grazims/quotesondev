@@ -23,9 +23,8 @@
 			<header id="masthead" class="site-header" role="banner">
 				<div class="site-branding">
 					
-					<a href="http://localhost:8888/quotes/">
-					<img src="https://quotes.academy.red/wp-content/themes/quotesondev/images/qod-logo.svg" class="logo" alt="Quotes on Dev logo"></a>
 				
+					<a href="http://localhost:8888/quotes/" rel="home" class="logo"><img class="logo" src="<?php echo get_template_directory_uri() . '/qod-logo.svg' ?> " alt="Quotes on Dev logo"/></a>
 				</div>
 		</div><!-- .site-branding -->
 
