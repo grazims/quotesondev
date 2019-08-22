@@ -18,9 +18,9 @@ get_header(); ?>
 			<?php query_posts($args); if(have_posts()) : while ( have_posts() ) : the_post(); ?>
 
 				<div class="nome">
-				 <blockquote><p class="quotation">graziela </p></blockquote>
+				 <blockquote><p class="quotation"> 
 				<?php get_template_part( 'template-parts/content-home' ); ?>
-				
+				</p></blockquote>
 				</div> 
 				<button type="button" id="another">"Show Me Another!"</button>
 

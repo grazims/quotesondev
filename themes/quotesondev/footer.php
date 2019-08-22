@@ -23,7 +23,7 @@
 								<a href="http://localhost:3000/quotes/submit/">Submit a Quote</a> 
 							</li>
 					</div>
-					<div class="gra">
+					<div class="red-link">
 						<p>Brought to you by <a href="http://www.redacademy.com">RED Academy</a>
 					</div>
 				</div><!-- .site-info -->
