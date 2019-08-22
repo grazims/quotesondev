@@ -13,8 +13,7 @@ A responsive website inspired on Chris Coyier’s Quotes on Design (https://quot
 * Gulp
 * PHP
 * SQL
-* JSON
-* AJAX
+* Json
 * WordPress
 
 
