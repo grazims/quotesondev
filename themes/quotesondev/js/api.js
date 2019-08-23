@@ -38,8 +38,6 @@ jQuery(document).ready(() => {
   });
 });
 
-//-----------------------//
-
 jQuery('#submit').on('click', function(event) {
   event.preventDefault();
 
@@ -79,6 +77,6 @@ jQuery('#submit').on('click', function(event) {
     .fail(function() {
       jQuery('.form').hide();
       jQuery('.site-main').hide();
-      jQuery('.form-section').append('<h1> Ops, something!</h1>');
+      jQuery('.form-section').append('<h1> Ops, something went wrong!</h1>');
     });
 });
