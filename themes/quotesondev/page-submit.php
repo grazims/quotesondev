@@ -13,37 +13,39 @@ get_header(); ?>
 		<h1> Submit a Quote</h1>
 
 			<?php if ( is_user_logged_in() && current_user_can( 'publish_posts' ) ) : ?>
-			<div class="form-section">
+			<form class="form-section">
 
-			<div class="form">
-				<p>Author of Quote:</p> <input type="text" name="quote" value="<?php echo $website;?>">
-			</div>
+			<label for="title" class="form">
+				<p>Author of Quote:</p> 
+				<input id="title" type="text">
+			</label>
 
-			<div class="form">
-				<p>Quote:</p> <textarea name="url" rows="4" columns="1"><?php echo $comment;?></textarea>
-			</div>
+			<label for="content" class="form">
+				<p>Quote:</p> 
+				<textarea name="content" id="quote-content"></textarea>
+			</label>
 
-			<div class="form">
-			<p>Where did you find this quote? (e.g. book name)</p> <input type="text" name="source" value="<?php echo $website;?>">
-			</div>
+			<label for="url" class="form"> 
+			<p>Where did you find this quote? (e.g. book name)</p>
+			 <input name="url" id="url" type="text">
+			</label>
 
-			<div class="form">
-			<p>Provide the URL of the quote source, if available. </p><input type="text" name="source" value="<?php echo $email;?>">
-			</div>
-			</div>
+			<label for="urlSource" class="form">
+			<p>Provide the URL of the quote source, if available. </p>
+			<input name="urlSource" id="urlSource" type="text">
+			</label>
 			
-				<button type="button" id="submit">Submit Quote</button>
+			<button type="submit" id="submit">Submit Quote</button>
+			</form>
 
 
 		   <?php else : ?> 
-		   <div class="form-section2">
+		   	<div class="form-section2">
 				<p>Sorry, you must be logged in to submit a quote!</p>
 				<a href="http://localhost:8888/quotes/wp-login.php?" >Click here to login.</a>
 			</div>
-
-				
 			
-<?php endif; ?>
+			<?php endif; ?>
 
 		</main><!-- #main -->
 	</div><!-- #primary -->

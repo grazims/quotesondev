@@ -38,45 +38,70 @@ jQuery(document).ready(() => {
   });
 });
 
-jQuery('#submit').on('click', function(event) {
-  event.preventDefault();
+// jQuery('#submit').on('submit', function(event) {
+//   event.preventDefault();
 
-  let title = jQuery('.author').val();
-  let content = jQuery('.quote').val();
-  let source = jQuery('.source').val();
-  let sourceURL = jQuery('.url').val();
+//   const title = jQuery('#title').val();
+//   const content = jQuery('#content').val();
+//   const source = jQuery('#url').val();
+//   const sourceUrl = jQuery('#urlSource').val();
 
-  let arrayjson = {
-    title: title,
-    content: content,
-    source: source,
-    source_url: sourceURL,
-    status: 'pending'
-  };
+//   jQuery
+//     .ajax({
+//       method: 'POST',
+//       url: red_vars.rest_url + 'wp/v2/posts/',
+//       data: {
+//         title,
+//         content,
+//         source: _qod_quote_source,
+//         source_url: _qod_quote_source_url,
+//         status: 'pending'
+//       },
+//       beforeSend: function(xhr) {
+//         xhr.setRequestHeader('X-WP-Nonce', red_vars.wpapi_nonce);
+//       }
+//     })
+//     .done(function() {
+//       title.val('');
+//       content.val('');
+//       source.val('');
+//       sourceUrl.val('');
+//     })
+//     .fail(function() {
+//       jQuery('.form-section').append('<h1> Ops, something went wrong!</h1>');
+//     });
+// });
 
-  let postUrl = red_vars.rest_url + 'wp/v2/posts/';
+jQuery('#submit').on('click', function(e) {
+  e.preventDefault();
+  const title = jQuery('#title').val(),
+    content = jQuery('#quote-content').val(),
+    _qod_quote_source = jQuery('#url').val(),
+    _qod_quote_source_url = jQuery('#urlSource').val();
+
+  console.log(title, content, _qod_quote_source, _qod_quote_source_url);
 
   jQuery
     .ajax({
       method: 'POST',
-      cache: false,
-      url: postUrl,
-      dataType: 'json',
-      data: arrayjson,
+      url: red_vars.rest_url + 'wp/v2/posts',
+      data: {
+        title,
+        content,
+        _qod_quote_source,
+        _qod_quote_source_url,
+        status: 'pending'
+      },
       beforeSend: function(xhr) {
         xhr.setRequestHeader('X-WP-Nonce', red_vars.wpapi_nonce);
       }
     })
     .done(function() {
-      jQuery('.form').hide();
-      jQuery('.site-main').hide();
-      jQuery('.form-section').append(
-        '<h1> Thank you for your submission!</h1>'
-      );
+      jQuery('form').val('');
     })
     .fail(function() {
-      jQuery('.form').hide();
-      jQuery('.site-main').hide();
-      jQuery('.form-section').append('<h1> Ops, something went wrong!</h1>');
+      jQuery('form').append(
+        '<p class="failure">Quote not submitted. Refresh the page and try again</p>'
+      );
     });
 });
